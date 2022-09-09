@@ -15,7 +15,7 @@
                     </div>
                     <p class="w-1/3">
                         @php
-                            echo number_format($rate['rate'], 2) . ' ' . $rate['rate'];
+                            echo number_format($rate['rate'], 2) . ' ' . $rate['symbol'];
                         @endphp
                     </p>
                 </div>
