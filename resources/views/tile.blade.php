@@ -14,7 +14,7 @@
                         </svg>
                     </div>
                     <p class="w-1/3">
-                        {{ $rate->rate . ' ' . $rate->symbol }}
+                        {{ "$rate->rate $rate->symbol" }}
                     </p>
                 </div>
             </li>
