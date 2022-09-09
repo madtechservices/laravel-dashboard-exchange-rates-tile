@@ -22,7 +22,7 @@ In your dashboard view you use the `livewire:dashboard-exchange-rates-tile` comp
 
 ```html
 <x-dashboard>
-    <livewire:dashboard-exchange-rates-tile position="a1" />
+    <livewire:exchange-rates-tile position="a1" />
 </x-dashboard>
 ```
 
