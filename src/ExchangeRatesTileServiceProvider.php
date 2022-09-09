@@ -2,7 +2,6 @@
 
 namespace Avelar\ExchangeRates;
 
-use Vendor\MyTile\ExchangeRatesTileComponent;
 use Livewire\Livewire;
 use Illuminate\Support\ServiceProvider;
 

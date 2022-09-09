@@ -1,10 +1,10 @@
 <x-dashboard-tile :position="$position" :refresh-interval="$refreshIntervalInSeconds">
     <ul role="list" class="min-h-full space-y-3 flex flex-col items-center justify-center">
-        @foreach ($data['rates'] as $rate)
+        @foreach ($rates as $rate)
             <li class="overflow-hidden rounded-md bg-white px-6 py-4 shadow w-full">
                 <div class="w-full flex justify-between items-center text-xl">
                     <p class="w-1/3">
-                        1 {{ $data['base'] }}
+                        1 {{ $base }}
                     </p>
                     <div class="w-1/3">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -14,7 +14,7 @@
                         </svg>
                     </div>
                     <p class="w-1/3">
-                        {{ "$rate->rate $rate->symbol" }}
+                        {{ "{$rate['rate']} {$rate['symbol']}" }}
                     </p>
                 </div>
             </li>
