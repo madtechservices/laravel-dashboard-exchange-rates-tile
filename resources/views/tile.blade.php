@@ -14,7 +14,9 @@
                         </svg>
                     </div>
                     <p class="w-1/3">
-                        {{ "{$rate['rate']} {$rate['symbol']}" }}
+                        @php
+                            echo number_format($rate['rate'], 2) . ' ' . $rate['rate'];
+                        @endphp
                     </p>
                 </div>
             </li>
