@@ -1,17 +1,18 @@
 {
-    "name": ":vendor/:package_name",
-    "description": ":package_description",
+    "name": "victoravelar/laravel-dashboard-exchange-rates-tile",
+    "description": "It allows you to display a list of selected currencies and it's exchange rate to a base currency of your choice.",
     "keywords": [
-        ":vendor",
-        ":package_name"
+        "exchange-rates",
+        "laravel",
+        "laravel-dashboard"
     ],
-    "homepage": "https://github.com/:vendor/:package_name",
+    "homepage": "https://github.com/VictorAvelar/laravel-dashboard-exchange-rates-tile",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://:vendor.be",
+            "name": "Victor Avelar",
+            "email": "deltatuts@gmail.com",
+            "homepage": "https://victoravelar.dev",
             "role": "Developer"
         }
     ],
@@ -25,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\MyTile\\": "src"
+            "Avelar\\ExchangeRates\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\MyTile\\Tests\\": "tests"
+            "Avelar\\ExchangeRates\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\MyTile\\MyTileServiceProvider"
+                "Avelar\\ExchangeRates\\ExchangeRatesTileServiceProvider"
             ]
         }
     },
