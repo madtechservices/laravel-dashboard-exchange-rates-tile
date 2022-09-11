@@ -4,7 +4,7 @@
         @foreach ($rates as $rate)
             <li @class([
                 'overflow-hidden rounded-md px-2 py-1 shadow w-full',
-                'bg-emerald-100' => $rate['kind'] == 'crypto',
+                'bg-gray-200' => $rate['kind'] == 'crypto',
                 'bg-white' => $rate['kind'] != 'crypto',
             ])>
                 <div class="w-full flex justify-between items-center text-xl">
