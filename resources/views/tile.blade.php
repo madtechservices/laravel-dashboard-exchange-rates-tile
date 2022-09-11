@@ -3,8 +3,9 @@
     <ul role="list" class="min-h-full space-y-3 flex flex-col items-center justify-center">
         @foreach ($rates as $rate)
             <li @class([
-                'overflow-hidden rounded-md bg-white px-2 py-1 shadow w-full',
+                'overflow-hidden rounded-md px-2 py-1 shadow w-full',
                 'bg-emerald-100' => $rate['kind'] == 'crypto',
+                'bg-white' => $rate['kind'] != 'crypto',
             ])>
                 <div class="w-full flex justify-between items-center text-xl">
                     <p class="w-1/3">
