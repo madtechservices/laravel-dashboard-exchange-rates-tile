@@ -23,10 +23,18 @@ class ExchangeRatesStore
         $data = [];
 
         foreach ($rates['rates'] as $symbol => $rate) {
+            $kind = in_array(
+                $symbol,
+                config('dashboard.tiles.exchange_rates.crypto')
+            )
+                    ? 'crypto'
+                    : 'currency';
+
             $data[] = [
                 'symbol' => $symbol,
                 'date' => $rates['date'],
                 'rate' => $rate,
+                'kind' => $kind,
             ];
         }
 

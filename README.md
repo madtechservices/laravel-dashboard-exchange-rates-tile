@@ -62,11 +62,19 @@ return [
     'tiles' => [
         // other tiles ...
         'exchange_rates' => [
+            // The rates provider you wish to use, supported values are:
+            // exchangerate.host -> free provider
+            // fixer.io -> fremium (recommended for sensitive apps)
+            'provider' => 'exchangerate.host',
             // The currency you want used as base.
             'base' => 'EUR',
             // List your symbols of interest.
             'symbols' => ['GBP', 'USD'],
-            // To get an api key visit https://fixer.io
+            // If you are using exchangerates some crypto symbols are also
+            // supported.
+            'crypto' => ['BTC'],
+            // To get an api key visit https://fixer.io, for exchangerates
+            // you need no api key.
             'api_key' => env('FIXER_API_KEY', ''),
             // Tile refresh interval.
             'refresh_interval_in_seconds' => 60,

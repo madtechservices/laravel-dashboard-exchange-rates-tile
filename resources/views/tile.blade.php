@@ -1,4 +1,5 @@
 <x-dashboard-tile :position="$position" :refresh-interval="$refreshIntervalInSeconds">
+    <h3 class="text-base text-bold">Exchange rates</h3>
     <ul role="list" class="min-h-full space-y-3 flex flex-col items-center justify-center">
         @foreach ($rates as $rate)
             <li class="overflow-hidden rounded-md bg-white px-6 py-4 shadow w-full">
@@ -15,7 +16,8 @@
                     </div>
                     <p class="w-1/3">
                         @php
-                            echo number_format($rate['rate'], 2) . ' ' . $rate['symbol'];
+                            $places = $rate['kind'] == 'crypto' ? 6 : 2;
+                            echo number_format($rate['rate'], $places) . ' ' . $rate['symbol'];
                         @endphp
                     </p>
                 </div>
