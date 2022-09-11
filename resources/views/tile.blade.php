@@ -2,8 +2,10 @@
     <h3 class="text-base text-bold text-center">Exchange rates</h3>
     <ul role="list" class="min-h-full space-y-3 flex flex-col items-center justify-center">
         @foreach ($rates as $rate)
-            <li @classs(["overflow-hidden rounded-md bg-white px-2 py-1 shadow w-full", "bg-emerald-100"=> $rate['kind']
-                == 'crypto'])>
+            <li @class([
+                'overflow-hidden rounded-md bg-white px-2 py-1 shadow w-full',
+                'bg-emerald-100' => $rate['kind'] == 'crypto',
+            ])>
                 <div class="w-full flex justify-between items-center text-xl">
                     <p class="w-1/3">
                         1 {{ $base }}
