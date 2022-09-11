@@ -2,7 +2,14 @@
 
 namespace Avelar\ExchangeRates\Tests;
 
-class TestCase extends \Orchestra\TestBench\TestCase
+use Orchestra\TestBench\TestCase as OrchestraTestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
+
+class TestCase extends OrchestraTestCase
 {
+    use InteractsWithViews;
+    use RefreshDatabase;
+
     protected $loadEnvironmentVariables = true;
 }
