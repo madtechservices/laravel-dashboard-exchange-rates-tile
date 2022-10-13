@@ -17,7 +17,7 @@ class ConverterTileComponent extends Component
     {
         $base = config('dashboard.tiles.exchange_rates.base');
 
-        return view('dashboard-exchange-rates-tile::tile', [
+        return view('dashboard-exchange-rates-tile::converter', [
             'base' => $base,
             'rates' => ExchangeRatesStore::make($base)->values(),
             'refreshIntervalInSeconds' => $this->refreshInSeconds

@@ -23,7 +23,7 @@ class ExchangeRatesStore
         $data = [];
         $values = [];
 
-        $value = config('dashboard.tiles.exhange_rates.convert_value');
+        $value = config('dashboard.tiles.exchange_rates.convert_value');
 
         foreach ($rates['rates'] as $symbol => $rate) {
             $kind = in_array(
@@ -40,7 +40,7 @@ class ExchangeRatesStore
                 'kind' => $kind,
             ];
 
-            $value[] = [
+            $values[] = [
                 'symbol' => $symbol,
                 'date' => $rates['date'],
                 'value' => $value * $rate,
