@@ -26,14 +26,18 @@ In your dashboard view you use the `livewire:dashboard-exchange-rates-tile` comp
 </x-dashboard>
 ```
 
+
+In your dashboard view you use the `livewire:dashboard-exchange-converter-tile` component.
+
+```html
+<x-dashboard>
+    <livewire:exchange-converter-tile position="a1" />
+</x-dashboard>
+```
+
 #### Fetching exchange rates
 
 In `app\Console\Kernel.php` you should schedule the `Avelar\ExchangeRates\UpdateCurrencyExchangeRatesCommand` to run. 
-
-If you are using fixer.io free tier, you are limited to max. 100 requests / day. This means you will only be able to query the API
-~15 min. to have consistent updates 24 hours.
-
-If you are using a premium tier then you can adapt the scheduled interval to run more frequently.
 
 ```php
 // in app/console/Kernel.php
@@ -41,7 +45,7 @@ If you are using a premium tier then you can adapt the scheduled interval to run
 protected function schedule(Schedule $schedule)
 {
     // ...
-    $schedule->command(Avelar\ExchangeRates\UpdateCurrencyExchangeRatesCommand::class)->everyFifteenMinutes();
+    $schedule->command(Avelar\ExchangeRates\UpdateCurrencyExchangeRatesCommand::class)->everyMinute();
 }
 
 ```
