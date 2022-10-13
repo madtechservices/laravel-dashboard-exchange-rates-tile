@@ -21,6 +21,9 @@ class ExchangeRatesStore
     public function updateRates(array $rates)
     {
         $data = [];
+        $values = [];
+
+        $value = config('dashboard.tiles.exhange_rates.convert_value');
 
         foreach ($rates['rates'] as $symbol => $rate) {
             $kind = in_array(
@@ -36,14 +39,28 @@ class ExchangeRatesStore
                 'rate' => $rate,
                 'kind' => $kind,
             ];
+
+            $value[] = [
+                'symbol' => $symbol,
+                'date' => $rates['date'],
+                'value' => $value * $rate,
+                'kind' => $kind,
+            ];
         }
 
         $this->tile->putData('rates', $data);
+        $this->tile->putData('values', $values);
     }
 
     public function rates(): array
     {
         return collect($this->tile->getData('rates') ?? [])
+            ->toArray();
+    }
+
+    public function values(): array
+    {
+        return collect($this->tile->getData('values') ?? [])
             ->toArray();
     }
 }
