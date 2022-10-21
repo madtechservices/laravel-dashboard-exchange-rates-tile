@@ -16,13 +16,13 @@ class ExchangeRatesTileServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__.'/../resources/views' => resource_path(
+            __DIR__ . '/../resources/views' => resource_path(
                 'views/vendor/dashboard-exchange-rates-tile'
             ),
         ], 'dashboard-exchange-rates-views');
 
         $this->loadViewsFrom(
-            __DIR__.'/../resources/views',
+            __DIR__ . '/../resources/views',
             'dashboard-exchange-rates-tile'
         );
 
