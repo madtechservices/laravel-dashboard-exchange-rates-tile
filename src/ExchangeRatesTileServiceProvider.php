@@ -30,5 +30,9 @@ class ExchangeRatesTileServiceProvider extends ServiceProvider
             'exchange-rates-tile',
             ExchangeRatesTileComponent::class
         );
+        Livewire::component(
+            'exchange-converter-tile',
+            ConverterTileComponent::class
+        );
     }
 }

@@ -1,4 +1,4 @@
-project_name: mollie-api-golang
+project_name: laravel-dashboard-exchange-rates
 build:
   skip: true
 changelog:
