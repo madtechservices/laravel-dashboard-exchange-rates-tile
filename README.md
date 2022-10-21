@@ -18,6 +18,10 @@ composer require VictorAvelar/laravel-dashboard-exchange-rates-tile
 
 ## Usage
 
+#### Exchange rates tile
+
+Depending on your provider, this tile will show the most recent exchange rate for the symbols listed in your configuration.
+
 In your dashboard view you use the `livewire:dashboard-exchange-rates-tile` component.
 
 ```html
@@ -26,6 +30,13 @@ In your dashboard view you use the `livewire:dashboard-exchange-rates-tile` comp
 </x-dashboard>
 ```
 
+##### Example
+
+![Exchange rates example](./media/exchange-rates.png)
+
+#### Exchange rate converter
+
+The conversion of a certain amount in your base currency to each symbol in your configuration is displayed on this tile.
 
 In your dashboard view you use the `livewire:dashboard-exchange-converter-tile` component.
 
@@ -34,6 +45,10 @@ In your dashboard view you use the `livewire:dashboard-exchange-converter-tile` 
     <livewire:exchange-converter-tile position="a1" />
 </x-dashboard>
 ```
+
+##### Example
+
+![Exchange rates example](./media/currency-conversion.png)
 
 #### Fetching exchange rates
 
